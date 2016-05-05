@@ -36,5 +36,15 @@
         "psr-4": {
             "Academe\\ProspectusTest\\": "test/ProspectusTest/"
         }
-    }
+    },
+    "scripts": {
+        "check": [
+            "@cs",
+            "@test"
+        ],
+        "cs": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable"
 }
