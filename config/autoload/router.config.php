@@ -28,8 +28,8 @@ return [
                         'action'        => 'index'
                     ]
                 ],
-//                'may_terminate' => true,
-//                'child_routes' => []
+                //                'may_terminate' => true,
+                //                'child_routes' => []
             ]
         ]
     ]

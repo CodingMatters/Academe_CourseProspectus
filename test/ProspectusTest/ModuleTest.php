@@ -31,7 +31,9 @@ use Prospectus\Module as ProspectusModule;
 
 class ModuleTest extends \PHPUnit_Framework_TestCase
 {
-    /** Academe\Prospectus\Module */
+    /**
+ * Academe\Prospectus\Module 
+*/
     private $module;
     
     public function setUp()

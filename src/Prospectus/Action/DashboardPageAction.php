@@ -35,10 +35,14 @@ use Zend\Expressive\Template;
 
 class DashboardPageAction
 {
-    /** @var Router\RouterInterface */
+    /**
+ * @var Router\RouterInterface 
+*/
     private $router;
 
-    /** @var Template\TemplateRendererInterface */
+    /**
+ * @var Template\TemplateRendererInterface 
+*/
     private $template;
 
     public function __construct(Router\RouterInterface $router, Template\TemplateRendererInterface $template = null)
@@ -50,10 +54,12 @@ class DashboardPageAction
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next = null)
     {
         if (!$this->template) {
-            return new JsonResponse([
+            return new JsonResponse(
+                [
                 'welcome' => 'Congratulations! You have installed the zend-expressive skeleton application.',
                 'docsUrl' => 'zend-expressive.readthedocs.org',
-            ]);
+                ]
+            );
         }
 
         return new HtmlResponse($this->template->render('prospectus::dashboard-page', ["yolo" => "YOLO!!!"]));

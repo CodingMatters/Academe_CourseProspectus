@@ -3,11 +3,11 @@
 $config      = [];
 
 $configFiles = [
-    include __DIR__ . '/autoload/module_layout.config.php',
-    include __DIR__ . '/autoload/navigator.config.php',
-    include __DIR__ . '/autoload/router.config.php',
-    include __DIR__ . '/autoload/translator.config.php',
-    include __DIR__ . '/autoload/view_manager.config.php'    
+    require __DIR__ . '/autoload/module_layout.config.php',
+    require __DIR__ . '/autoload/navigator.config.php',
+    require __DIR__ . '/autoload/router.config.php',
+    require __DIR__ . '/autoload/translator.config.php',
+    require __DIR__ . '/autoload/view_manager.config.php'    
 ];
 
 foreach ($configFiles as $configFile) {
