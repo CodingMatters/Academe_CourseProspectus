@@ -57,7 +57,7 @@ class Module
     
     public function getControllerConfig()
     {
-        return include __DIR__ . '/config/autoload/controllers.config.php';
+        return include __DIR__ . '/config/autoload/controller.config.php';
     }
     
     public function getServiceConfig()
