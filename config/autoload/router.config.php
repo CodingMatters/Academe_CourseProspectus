@@ -1,17 +1,38 @@
 <?php
 
+namespace Academe\Prospectus;
+
 /**
  * ZF2 Routing Scheme Configuration
+ * 
+ * @todo Enable Zend Expressive Route Configuration With Middleware
+ * 
+ * <code>
+ *   'routes' => [
+ *       [
+ *           'name' => 'prospectus',
+ *           'path' => '/prospectus',
+ *           'middleware' => Academe\Prospectus\Action\DashboardPageAction::class,
+ *           'allowed_methods' => ['GET'],
+ *       ]
+ *   ]
+ * </code>
  */
 return [
     'router' => [
         'routes' => [
-            [
-                'name' => 'prospectus',
-                'path' => '/prospectus',
-                'middleware' => Academe\Prospectus\Action\DashboardPageAction::class,
-                'allowed_methods' => ['GET'],
-            ],
+            'prospectus' => [
+                'type'      => 'Literal',
+                'options'   => [
+                    'route'     => '/prospectus',
+                    'defaults'  => [
+                        'controller'    => Action\DashboardPageAction::class,
+                        'action'        => 'index'
+                    ]
+                ],
+                'may_terminate' => true,
+                'child_routes' => []
+            ]
         ]
     ]
 ];
