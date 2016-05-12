@@ -27,7 +27,7 @@
 
 namespace ProspectusTest;
 
-use Academe\Prospectus\Module as ModuleConfig;
+use Prospectus\Module as ProspectusModule;
 
 class ModuleTest extends \PHPUnit_Framework_TestCase
 {
@@ -36,7 +36,7 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
     
     public function setUp()
     {
-        $this->module = new ModuleConfig();
+        $this->module = new ProspectusModule();
     }
 
     /**
