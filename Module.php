@@ -1,10 +1,10 @@
 <?php
 
-/* 
+/*
  * The MIT License
  *
  * Copyright 2016 Coding Matters, Inc.
- * Author: Gab Amba <gamba@gabbydgab.com>.
+ * Author  Gab Amba <gamba@gabbydgab.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,18 +25,43 @@
  * THE SOFTWARE.
  */
 
-return [
-    'templates' => [
-        'paths' => [
-            'prospectus'    => ['templates/prospectus'],
-        ]
-    ],
-    'view_helpers' => [
-        // zend-servicemanager-style configuration for adding view helpers:
-        // - 'aliases'
-        // - 'invokables'
-        // - 'factories'
-        // - 'abstract_factories'
-        // - etc.
-    ]
-];
+namespace Academe\Prospectus;
+
+use Zend\Mvc\ModuleRouteListener;
+use Zend\Mvc\MvcEvent;
+
+class Module
+{
+    public function onBootstrap(MvcEvent $e)
+    {
+        $eventManager        = $e->getApplication()->getEventManager();
+        $moduleRouteListener = new ModuleRouteListener();
+        $moduleRouteListener->attach($eventManager);
+    }
+
+    public function getConfig()
+    {
+        return include __DIR__ . '/config/module.config.php';
+    }
+
+    public function getAutoloaderConfig()
+    {
+        return array(
+            'Zend\Loader\StandardAutoloader' => array(
+                'namespaces' => array(
+                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
+                ),
+            ),
+        );
+    }    
+    
+    public function getControllerConfig()
+    {
+        return include __DIR__ . '/config/autoload/controllers.config.php';
+    }
+    
+    public function getServiceConfig()
+    {
+        return include __DIR__ . '/config/autoload/container.config.php';
+    }
+}
