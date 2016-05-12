@@ -1,2 +1,3 @@
-# Academe_CourseProspectus
-Course Prospectus Interface for Academe Systems
+# Academe Course Prospectus
+Vanilla Integration of Course Prospectus for Academe Systems
+
