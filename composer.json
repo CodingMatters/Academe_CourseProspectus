@@ -25,7 +25,8 @@
         "zendframework/zend-servicemanager": "^2.7.3 || ^3.0",
         "ocramius/proxy-manager": "^1.0 || ^2.0",
         "zendframework/zend-expressive-zendviewrenderer": "^1.0",
-        "filp/whoops": "^2.0"
+        "filp/whoops": "^2.0",
+        "zendframework/zend-mvc": "^2.5"
     },
     "autoload": {
         "psr-4": {
