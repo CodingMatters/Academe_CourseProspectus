@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-namespace Academe\Prospectus;
+namespace Prospectus;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
@@ -53,7 +53,7 @@ class Module
                 ),
             ),
         );
-    }    
+    }
     
     public function getControllerConfig()
     {

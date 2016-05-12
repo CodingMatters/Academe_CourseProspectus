@@ -1,17 +1,12 @@
 <?php
 
 return [
-    'templates' => [
-        'paths' => [
-            'prospectus'    => ['templates/prospectus'],
-        ]
-    ],
-    'view_helpers' => [
-        // zend-servicemanager-style configuration for adding view helpers:
-        // - 'aliases'
-        // - 'invokables'
-        // - 'factories'
-        // - 'abstract_factories'
-        // - etc.
+    'view_manager' => [
+        'template_map' => [
+            //'prospectus'           => __DIR__ . '/../view/layout/layout.phtml',
+        ],
+        'template_path_stack'       => [
+            'prospectus'   => __DIR__ . '/../templates'
+        ],
     ]
 ];

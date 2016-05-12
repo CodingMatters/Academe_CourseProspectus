@@ -29,14 +29,14 @@
         "zendframework/zend-mvc": "^2.5"
     },
     "autoload": {
+        "classmap": ["./Module.php"],
         "psr-4": {
-            "Academe\\Prospectus\\": "src/Prospectus/"
+            "Prospectus\\": "src/Prospectus/"
         }
     },
     "autoload-dev": {
-        "classmap": ["./Module.php"],
         "psr-4": {
-            "Academe\\ProspectusTest\\": "test/ProspectusTest/"
+            "ProspectusTest\\": "test/ProspectusTest/"
         }        
     },
     "scripts": {

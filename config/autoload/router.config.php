@@ -1,7 +1,5 @@
 <?php
 
-namespace Academe\Prospectus;
-
 /**
  * ZF2 Routing Scheme Configuration
  * 
@@ -26,12 +24,12 @@ return [
                 'options'   => [
                     'route'     => '/prospectus',
                     'defaults'  => [
-                        'controller'    => Action\DashboardPageAction::class,
+                        'controller'    => 'Application\Controller\Index',
                         'action'        => 'index'
                     ]
                 ],
-                'may_terminate' => true,
-                'child_routes' => []
+//                'may_terminate' => true,
+//                'child_routes' => []
             ]
         ]
     ]
