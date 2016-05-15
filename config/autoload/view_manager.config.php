@@ -3,10 +3,10 @@
 return [
     'view_manager' => [
         'template_map' => [
-            //'prospectus'           => __DIR__ . '/../view/layout/layout.phtml',
+            'prospectus/index/index'           => __DIR__ . '/../../view/application/index/index.phtml',
         ],
         'template_path_stack'       => [
-            'prospectus'   => __DIR__ . '/../templates'
+            'prospectus'   => __DIR__ . '/../templates/prospectus/'
         ],
     ]
 ];

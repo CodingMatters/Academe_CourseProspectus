@@ -22,10 +22,9 @@ return [
             'prospectus' => [
                 'type'      => 'Literal',
                 'options'   => [
-                    'route'     => '/prospectus',
+                    'route'     => '/courses',
                     'defaults'  => [
-                        'controller'    => 'Application\Controller\Index',
-                        'action'        => 'index'
+                        'middleware' => "Academe\Prospectus\Middleware\CourseMiddleware"
                     ]
                 ],
                 //                'may_terminate' => true,
