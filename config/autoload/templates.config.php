@@ -4,9 +4,9 @@ return [
     'templates'     => [
         'layout'    => 'layout/default',
         'map'       => [
-            'prospectus/index'  => __DIR__ . '/../../templates/page/index.phtml'
+            
         ],
-        'path'      => [
+        'paths'      => [
             'page'  => [__DIR__ . '/../../templates/page']
         ]
     ],
