@@ -2,7 +2,7 @@
 
 return [
     'templates'     => [
-        'layout'    => [],
+        'layout'    => 'layout/default',
         'map'       => [
             'prospectus/index'  => __DIR__ . '/../../templates/page/index.phtml'
         ],
