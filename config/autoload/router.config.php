@@ -22,7 +22,7 @@ return [
             'prospectus' => [
                 'type'      => 'Literal',
                 'options'   => [
-                    'route'     => '/prospectus',
+                    'route'     => '/courses',
                     'defaults'  => [
                         'controller'    => 'Application\Controller\Index',
                         'action'        => 'index'
