@@ -7,7 +7,7 @@ return [
             
         ],
         'paths'      => [
-            'page'  => [__DIR__ . '/../../templates/page']
+            'prospectus'  => [__DIR__ . '/../../templates/page']
         ]
     ],
     'view_helpers'  => [

@@ -42,6 +42,6 @@ final class IndexPage extends AbstractPage
 
     public function dispatch(ServerRequestInterface $request, ResponseInterface $response, callable $next = null)
     {
-        return new HtmlResponse($this->template->render("page::index", $this->data));
+        return new HtmlResponse($this->template->render("prospectus::index", $this->data));
     }
 }
