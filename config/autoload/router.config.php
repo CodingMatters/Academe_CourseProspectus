@@ -1,6 +1,6 @@
 <?php
 
-use Academe\Prospectus;
+use Academiae\Prospectus;
 use CodingMatters\Kernel;
 
 return [
@@ -15,7 +15,7 @@ return [
         [
             'name' => 'prospectus',
             'path' => '/prospectus',
-            'middleware' => Academe\Prospectus\Page\IndexPage::class,
+            'middleware' => Prospectus\Page\IndexPage::class,
             'allowed_methods' => ['GET'],
         ]
     ]
