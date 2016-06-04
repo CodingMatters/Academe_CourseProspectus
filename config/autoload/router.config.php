@@ -1,11 +1,11 @@
 <?php
 
-use Academe\Prospectus;
+use Academiae\Prospectus;
 use CodingMatters\Kernel;
 
 return [
     "dependencies" =>  [
-        'aliases'       => [],        
+        'aliases'       => [],
         'invokables'    => [],
         'factories'     => [
             Prospectus\Page\IndexPage::class => Kernel\Factory\PageFactory::class
@@ -15,7 +15,7 @@ return [
         [
             'name' => 'prospectus',
             'path' => '/prospectus',
-            'middleware' => Academe\Prospectus\Page\IndexPage::class,
+            'middleware' => Prospectus\Page\IndexPage::class,
             'allowed_methods' => ['GET'],
         ]
     ]

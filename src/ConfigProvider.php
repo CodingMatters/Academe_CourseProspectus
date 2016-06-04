@@ -25,6 +25,27 @@
  * THE SOFTWARE.
  */
 
-namespace Academe\Prospectus;
+namespace Academiae\Prospectus;
 
-require_once __DIR__ . '/src/Module.php';
+class ConfigProvider
+{
+
+    /**
+     * Return configuration for this component.
+     *
+     * @return array
+     */
+    public function __invoke()
+    {
+        return $this->getDependencyConfig();
+    }
+    /**
+     * Return dependency mappings for this component.
+     *
+     * @return array
+     */
+    public function getDependencyConfig()
+    {
+        return include __DIR__ . '/../config/module.config.php';
+    }
+}

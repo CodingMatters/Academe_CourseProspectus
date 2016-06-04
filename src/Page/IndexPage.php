@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-namespace Academe\Prospectus\Page;
+namespace Academiae\Prospectus\Page;
 
 use CodingMatters\Kernel\Page\AbstractPage;
 use Zend\Expressive\Template\TemplateRendererInterface;
